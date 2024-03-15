@@ -1,6 +1,6 @@
 <h1>Ongun Akay's Personal Web Project</h1>
 
-<p>This is a personal web project created by Ongun Akay using PHP ProcessWire, JavaScript, and a simple portfolio to showcase his skills and accomplishments.</p>
+<p>This is a personal web project created by Ongun Akay using HTML, JavaScript, and a simple portfolio to showcase his skills and accomplishments.</p>
 
 <h2>Features</h2>
 <ul>
