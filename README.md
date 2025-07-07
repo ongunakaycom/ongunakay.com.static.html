@@ -124,3 +124,5 @@ This project is licensed under the MIT License — see the [LICENSE](./LICENSE) 
 While this is a personal project, feel free to fork it as a template for your own static portfolio. Pull requests and feedback are welcome if you’d like to suggest improvements.
 
 ---
+
+
