@@ -1,29 +1,134 @@
-<h1>Ongun Akay's Personal Web Project</h1>
+# 🌐 Ongun Akay – Front-End Portfolio (CI/CD Enabled)
 
-<p>This is a personal web project created by Ongun Akay using HTML, JavaScript, and a simple portfolio to showcase his skills and accomplishments.</p>
+Welcome to my personal portfolio website! Built using modern front-end technologies and deployed via **GitHub Actions** to **GitHub Pages**, this portfolio showcases my experience, professional background, and selected works in web development, email marketing, and digital design.
 
-<h2>Features</h2>
-<ul>
-  <li>Responsive design for optimal viewing on any device</li>
-  <li>Clean and modern user interface</li>
-  <li>Easy navigation through a clear and intuitive menu</li>
-  <li>Integrating social media links for visitors to connect with Ongun Akay online</li>
-  <li>A simple portfolio section to display Ongun Akay's past projects and accomplishments</li>
-</ul>
+> 🔧 **Live Site:** [ongunakay.com](https://ongunakay.com)  
+> 📦 **Repository:** [View on GitHub](https://github.com/ongunakaycom/your-repo-name)
 
-<h2>Technology Used</h2>
-<ul>
-  <li>Responsive UI</li>
-  <li>JavaScript: A programming language used to create interactive elements on web pages</li>
-  <li>HTML: A markup language used to structure and format content on the web</li>
-  <li>CSS: A style sheet language used to control the look and feel of web pages</li>
-</ul>
+---
 
-<h2>Credits</h2>
-<p>Ongun Akay: Creator and developer of the website</p>
+## ✨ Features
 
-<h2>Contact</h2>
-<p>If you have any questions or would like to get in touch with Ongun Akay, you can contact him through the following channels:</p>
-<ul>
-  <li>LinkedIn: <a href="https://www.linkedin.com/in/ongunakay/">Ongun Akay</a></li>
-</ul>
+- Fully responsive static website
+- Clean semantic HTML5 structure
+- Custom CSS and layout system
+- Optimized for performance and SEO
+- Deployed with **GitHub Actions CI/CD** to GitHub Pages
+- Modular file organization for easy maintenance
+
+---
+
+## 🛠 Tech Stack
+
+| Layer       | Technology                 |
+|------------|----------------------------|
+| Markup     | HTML5                      |
+| Styling    | CSS3, Normalize.css        |
+| Scripts    | Vanilla JavaScript         |
+| Fonts      | Google Fonts               |
+| Deployment | GitHub Pages + Actions     |
+
+---
+
+## 📁 Project Structure
+
+```
+
+portfolio/
+├── .github/workflows/     # CI/CD config (GitHub Actions)
+├── css/                   # Custom and utility styles
+├── js/                    # JavaScript for interactivity
+├── images/                # Project assets and icons
+├── index.html             # Homepage
+├── about.html             # About page
+├── works.html             # Portfolio/Projects
+├── portfolio.html         # Resume or extended portfolio
+├── LICENSE                # MIT License
+└── README.md              # This file
+
+````
+
+---
+
+## 🚀 Deployment – GitHub Pages (CI/CD)
+
+This site is automatically deployed on push to the `main` branch using GitHub Actions.
+
+### CI/CD Workflow
+
+`.github/workflows/static.yml`
+
+```yaml
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+````
+
+---
+
+## 👨‍💻 About the Developer
+
+**Ongun Akay**
+Frontend Developer | Web Architect | Email Marketing Specialist
+10+ years of experience in web technologies, UI/UX, and branding.
+
+* 🌐 Website: [ongunakay.com](https://ongunakay.com)
+* 💼 LinkedIn: [linkedin.com/in/ongunakay](https://www.linkedin.com/in/ongunakay/)
+* 🧑‍💻 GitHub: [github.com/ongunakaycom](https://github.com/ongunakaycom)
+* 📬 Email: [info@ongunakay.com](mailto:info@ongunakay.com)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🤝 Contributions
+
+While this is a personal project, feel free to fork it as a template for your own static portfolio. Pull requests and feedback are welcome if you’d like to suggest improvements.
+
+---
+
+✅ Let me know if you'd like to:
+
+* Add SEO meta tags & OpenGraph preview
+* Generate social preview images
+* Include JSON-LD for better SEO
+* Integrate analytics or form handlers
+
+Happy coding!
+
+
